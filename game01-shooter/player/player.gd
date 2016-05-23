@@ -2,6 +2,12 @@
 extends Area2D
 
 const SPEED = 200
+var exploted = false
+
+func _ready():
+	# Called every time the node is added to the scene.
+	# Initialization her
+	set_process(true)
 
 func _process(delta):
 	var dir=Vector2()
@@ -24,9 +30,9 @@ func _process(delta):
 	
 	set_pos(pos)
 
-
-func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization her
-	set_process(true)
-
+func exploit():
+	if (exploted):
+		return
+	get_node("sprite").hide()
+	get_node("explosion").set_emitting(true)
+	exploted=true
