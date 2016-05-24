@@ -32,9 +32,11 @@ func _process(delta):
 	
 	var shoot = Input.is_action_pressed("player_shot")
 	if (shoot and not prev_shoot):
-		var shot_res = preload("res://shot/shot.scn")
+		print("shot!")
+		var shot_res = preload("res://player/shot.scn")
 		var shot_scene = shot_res.instance()
 		shot_scene.set_pos( pos )
+		get_parent().add_child( shot_scene)
 		
 	prev_shoot = shoot
 	
