@@ -57,10 +57,38 @@ Creamos una nueva escena `enemy`.
     * Nueva
     * Lápiz -> Keys
     * activar Autoplay
-* Añadimos un nodo `CollisionPolygon2D`
+* Añadimos un nodo `CollisionShape2D`
     * Shape de tipo circle2D.
 
 ##Señales
 * Crear señal desde `Area2D`
     * Enemy area -> Script
 
+#Level
+
+Creamos un nivel para usar los personajes creados anteriormente.
+
+* Creamos una escena nueva `Node2D` llamada `level1`.
+* Instanciamos los objetos que hemos creado: `player` y `enemy`.
+* Los enemigos se pueden instanciar/copiar muchas veces para tener más.
+* Creamos un `Node2D` llamado `enemies` y ponemos como hijos de este ( acción `reparent`)
+a todos los nodos `enemy`. Esto lo hacemos para poder manejar a todos los
+enemigos como un ejército.
+* Para animar a todo el ejército añadimos nodo `AnimationPlayer` llamada `move_enemies`.
+    * Creamos animación llamada `move_down`.
+    * Elegimos nodo `enemies` y añadimos un nuevo key en pos=0.
+    * Ponemos de tiempo 10 segundos para la animación.
+    * En el segundo 10, movemos el ejército y creamos un segundo key final.
+
+#Disparo
+
+Vamos a crear una nueva escena para que sea el disparo del player.
+* Creamos nueva escena con nodo base `Area2D` y lo llamaremos shot.
+* Añadimos `sprite`.
+* Añadimos `CollisionPoligon2D`.
+* Le creamos un script al `shot` para que cambie la posición.
+* Añadimos nodo `VisibilityNotifier2D`
+    * Lo conectamos a  `exit_screen` del script de `shot`.
+    * En el código liberamos el recurso (`queue_free`).
+* En el enemigo al recibir un disparo debe desaparecer. Ver el código.
+* Creamos acción de disparar en `project settings -> InputMaps`.

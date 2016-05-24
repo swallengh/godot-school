@@ -3,6 +3,7 @@ extends Area2D
 
 const SPEED = 200
 var exploted = false
+var prev_shoot = false
 
 func _ready():
 	# Called every time the node is added to the scene.
@@ -27,8 +28,16 @@ func _process(delta):
 	
 	pos.x = clamp(pos.x, 0, size.x)
 	pos.y = clamp(pos.y, 0, size.y)
-	
 	set_pos(pos)
+	
+	var shoot = Input.is_action_pressed("player_shot")
+	if (shoot and not prev_shoot):
+		var shot_res = preload("res://shot/shot.scn")
+		var shot_scene = shot_res.instance()
+		shot_scene.set_pos( pos )
+		
+	prev_shoot = shoot
+	
 
 func exploit():
 	if (exploted):
