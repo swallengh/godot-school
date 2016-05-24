@@ -4,7 +4,8 @@
 
 Idea original de Juan Linietsky:
 * [Proyecto Github](https://github.com/reduz/godot_workshop)
-* [Vídeo Youtube](https://www.youtube.com/watch?v=XEkePR_3BU8) 
+* [Vídeo de Youtube en español](https://www.youtube.com/watch?v=XEkePR_3BU8) 
+* [English Youtube video](https://www.youtube.com/watch?v=9GPIeeJXBLc)
 
 Empezamos con un shooter 2D poque nos parece un juego sencillo para empezar.
 
@@ -92,3 +93,10 @@ Vamos a crear una nueva escena para que sea el disparo del player.
     * En el código liberamos el recurso (`queue_free`).
 * En el enemigo al recibir un disparo debe desaparecer. Ver el código.
 * Creamos acción de disparar en `project settings -> InputMaps`.
+
+#TODO
+
+* Poner sonido en las explosiones, y en los disparos.
+* Hacer que los marcianos exploten.
+* Sumar puntos con cada marciano muerto.
+* Cerrar la ventana del juego al terminar.

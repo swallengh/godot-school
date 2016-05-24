@@ -8,5 +8,5 @@ func _on_enemy_area_enter( area ):
 	if (area.get_name()=="player"):
 		area.exploit()
 	
-	if (area extends preload("res://enemy/enemy.scn")):
+	if (area extends preload("res://player/shot.gd")):
 		queue_free()
