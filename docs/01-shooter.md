@@ -24,6 +24,9 @@ Empezamos con un shooter 2D poque nos parece un juego sencillo para empezar.
 ##Acciones
 
 * Creamos los InputMaps en `Scene -> Project Settings -> InputMaps`
+    * Asociamos entradas con nombres de acciones que vamos a usar en nuestro juego.
+    
+![scene-project-settings-inputmaps](./images/scene-project-settings-inputmaps.png)
 
 ##Escena Player
 * Creamos una escena para e player.
