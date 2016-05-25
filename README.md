@@ -10,9 +10,9 @@
 * El motor incluye:
     * Input
     * 2D/3D Graphics
+    * Scripts (GDPython)
     * Sounds/Music
     * Physics
-    * Scripts (GDPython)
     * Export to other platforms.
 
 #Instalación
@@ -26,10 +26,13 @@ Conviene descargarse también:
 
 #Descarga
 
-Para descargar este repositorio hacemos:
+Para descargar este repositorio la primera vez hacemos:
 ```
 git clone https://github.com/dvarrui/games-with-godot.git
+```
 
+Para actualizar cada día hacemos:
+```
 cd games-with-godot
 git pull
 ```
