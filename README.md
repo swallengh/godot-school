@@ -29,4 +29,7 @@ Conviene descargarse también:
 Para descargar este repositorio hacemos:
 ```
 git clone git@github.com:dvarrui/games-with-godot.git
+
+cd games-with-godot
+git pull
 ```
