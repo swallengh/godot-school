@@ -8,6 +8,8 @@ var prev_shoot = false
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization her
+	get_node("sample").stop_voice(1)
+	
 	set_process(true)
 
 func _process(delta):
@@ -32,7 +34,6 @@ func _process(delta):
 	
 	var shoot = Input.is_action_pressed("player_shot")
 	if (shoot and not prev_shoot):
-		print("shot!")
 		var shot_res = preload("res://player/shot.scn")
 		var shot_scene = shot_res.instance()
 		shot_scene.set_pos( pos )
@@ -46,4 +47,5 @@ func exploit():
 		return
 	get_node("sprite").hide()
 	get_node("explosion").set_emitting(true)
+	get_node("sample").play("explosion",1)
 	exploted=true
