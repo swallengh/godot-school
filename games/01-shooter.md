@@ -9,11 +9,12 @@ Idea original de Juan Linietsky:
 
 Empezamos con un shooter 2D poque nos parece un juego sencillo para empezar.
 
+
 #Empezamos
 
-* Creamos directorio para el proyecto llamado `shooter-game1`.
+* Creamos directorio para el proyecto llamado `01-shooter`.
 * Descargamos unos assets de ejemplo del URL `https://github/reduz/godot_workshop`.
-* Creamos un nuevo proyecto Godot `godot -> New Project`.
+* Creamos un nuevo proyecto Godot `Programa Godot -> New Project`.
 * Editamos el proyecto para comenzar a crear el juego.
 
 #Player
