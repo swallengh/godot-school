@@ -17,6 +17,8 @@ Empezamos con un shooter 2D poque nos parece un juego sencillo para empezar.
 * Creamos un nuevo proyecto Godot `Programa Godot -> New Project`.
 * Editamos el proyecto para comenzar a crear el juego.
 
+![project-manager](./images/project-manager.png)
+
 #Player
 
 ##Acciones
