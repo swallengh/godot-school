@@ -9,5 +9,5 @@ func _on_enemy_area_enter( area ):
 		area.exploit()
 	
 	if (area extends preload("res://player/shot.gd")):
-		get_node("sample").play("beep",1)
+		get_node("sample").play("explosion")
 		queue_free()
