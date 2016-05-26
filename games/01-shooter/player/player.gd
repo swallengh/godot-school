@@ -45,3 +45,4 @@ func exploit():
 	get_node("explosion").set_emitting(true)
 	get_node("sample").play("explosion")
 	exploted=true
+	
