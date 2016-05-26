@@ -21,54 +21,52 @@ Empezamos con un shooter 2D poque nos parece un juego sencillo para empezar.
 
 #Player
 
-##Acciones
-
-* Creamos los InputMaps en `Scene -> Project Settings -> InputMaps`
+* Acciones: Creamos los InputMaps en `Scene -> Project Settings -> InputMaps`
     * Asociamos entradas con nombres de acciones que vamos a usar en nuestro juego.
-    
+
 ![scene-project-settings-inputmaps](./images/scene-project-settings-inputmaps.png)
 
-##Escena Player
-* Creamos una escena para e player.
-    * Nodos Area2D -> Sprite.
+* Creamos una **escena** para player.
+    * Nodos `Area2D` -> `Sprite`.
     * Atributo textura -> Imagen
-* Nodo Area2d -> Script para mover la nave.
+* Nodo `Area2d` -> `Script` para mover la nave.
 * Hay que poner controles para los límites de la ventana (Viewport).
 
-##Explosión
-
-Dentro de player crearemos la explosión.
-* Añadir nodo `Particle2D`.
-* Texture poner la imagen.
-* Spread 180
-* Linear velocity 100
-* Lifetime 1
-* Explosiven 0.2
-* Timeout 0.5
-
-##Colisiones
-
-* Añadimos un nodo `CollisionPolygon2D`
-* Creamos una forma poligonal de colisión.
-* Guardamos la escena `player`.
+* Explosión: Dentro de player crearemos la explosión.
+    * Añadir nodo `Particle2D`.
+    * Texture poner la imagen.
+    * Spread 180
+    * Linear velocity 100
+    * Lifetime 1
+    * Explosiven 0.2
+    * Timeout 0.5
+* Colisiones
+    * Añadimos un nodo `CollisionPolygon2D`
+    * Creamos una forma poligonal de colisión.
+    * Guardamos la escena `player`.
+* Sonido
+    * Nos descargamos un sonido de explosión de `https://www.freesound.org`.
+    * Convertimos el fichero en formato WAV de 16 bits.
+    * Guardamos el fichero de sonido en la carpeta `player` del proyecto.
+    * Añadimos nodo `SamplePlayer` y lo llamamos `sample`
+    * Vamos a `Config -> Sample -> New SampleLibrary`
+    * Añadimos en audio conel nombre `explosion`.
+    * Incorporamos código en GDScript para activar (play) el sonido cuando
+    explote el jugador.
 
 #Enemy
 
-##Escena del enemigo
-
-Creamos una nueva escena `enemy`.
-* Añadimos un nodo raíz del tipo `Area2D`.
-* Añadimos nodo `AnimatedSprite`
-    * En `frames` añadimos las imágenes que forman parte de la animación.
-* Añadimos nodo `AnimationPlayer`
-    * Nueva
-    * Lápiz -> Keys
-    * activar Autoplay
+* Creamos una nueva **escena** para `enemy`.
+    * Añadimos un nodo raíz del tipo `Area2D`.
+    * Añadimos nodo `AnimatedSprite`
+        * En `frames` añadimos las imágenes que forman parte de la animación.
+    * Añadimos nodo `AnimationPlayer`
+        * Nueva
+        * Lápiz -> Keys
+        * activar Autoplay
 * Añadimos un nodo `CollisionShape2D`
     * Shape de tipo circle2D.
-
-##Señales
-* Crear señal desde `Area2D`
+* Señales: Crear señal desde `Area2D`
     * Enemy area -> Script
 
 #Level
