@@ -6,10 +6,6 @@ var exploted = false
 var prev_shoot = false
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization her
-	get_node("sample").stop_voice(1)
-	
 	set_process(true)
 
 func _process(delta):
@@ -47,5 +43,5 @@ func exploit():
 		return
 	get_node("sprite").hide()
 	get_node("explosion").set_emitting(true)
-	get_node("sample").play("explosion",1)
+	get_node("sample").play("explosion")
 	exploted=true
