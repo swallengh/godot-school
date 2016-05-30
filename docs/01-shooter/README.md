@@ -7,8 +7,7 @@ Idea original de Juan Linietsky:
 * [Vídeo de Youtube en español](https://www.youtube.com/watch?v=XEkePR_3BU8) 
 * [English Youtube video](https://www.youtube.com/watch?v=9GPIeeJXBLc)
 
-Empezamos con un shooter 2D poque nos parece un juego sencillo para empezar.
-
+> Empezamos con un shooter 2D poque nos parece un juego sencillo para empezar.
 
 #Empezamos
 
@@ -32,8 +31,8 @@ Empezamos con un shooter 2D poque nos parece un juego sencillo para empezar.
 * Nodo `Area2d` -> `Script` para mover la nave.
 * Hay que poner controles para los límites de la ventana (Viewport).
 
-* Explosión: Dentro de player crearemos la explosión.
-    * Añadir nodo `Particle2D`.
+* Explosión (Nombre = `player/explosion`)
+    * Dentro de player añadir nodo `Particle2D`.
     * Texture poner la imagen.
     * Spread 180
     * Linear velocity 100
@@ -44,7 +43,7 @@ Empezamos con un shooter 2D poque nos parece un juego sencillo para empezar.
     * Añadimos un nodo `CollisionPolygon2D`
     * Creamos una forma poligonal de colisión.
     * Guardamos la escena `player`.
-* Sonido
+* Sonido (`player/sample`)
     * Nos descargamos un sonido de explosión de `https://www.freesound.org`.
     * Convertimos el fichero en formato WAV de 16 bits.
     * Guardamos el fichero de sonido en la carpeta `player` del proyecto.
@@ -54,16 +53,18 @@ Empezamos con un shooter 2D poque nos parece un juego sencillo para empezar.
     * Incorporamos código en GDScript para activar (play) el sonido cuando
     explote el jugador.
 
+![player-nodes](./images/player-nodes.png)
+
 #Enemy
 
 * Creamos una nueva **escena** para `enemy`.
-    * Añadimos un nodo raíz del tipo `Area2D`.
-    * Añadimos nodo `AnimatedSprite`
-        * En `frames` añadimos las imágenes que forman parte de la animación.
-    * Añadimos nodo `AnimationPlayer`
-        * Nueva
-        * Lápiz -> Keys
-        * activar Autoplay
+* Creamos un nodo raíz del tipo `Area2D`.
+* Añadimos nodo `AnimatedSprite`
+    * En `frames` añadimos las imágenes que forman parte de la animación.
+* Añadimos nodo `AnimationPlayer`
+    * Nueva
+    * Lápiz -> Keys
+    * activar Autoplay
 * Añadimos un nodo `CollisionShape2D`
     * Shape de tipo circle2D.
 * Señales: Crear señal desde `Area2D`
