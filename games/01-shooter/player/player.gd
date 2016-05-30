@@ -4,11 +4,14 @@ extends Area2D
 const SPEED = 200
 var exploted = false
 var prev_shoot = false
+var killed = 0
 
 func _ready():
 	set_process(true)
 
 func _process(delta):
+	if exploted:
+		return
 	var dir=Vector2()
 	
 	if (Input.is_action_pressed("player_down")):
@@ -30,13 +33,12 @@ func _process(delta):
 	
 	var shoot = Input.is_action_pressed("player_shot")
 	if (shoot and not prev_shoot):
-		var shot_res = preload("res://player/shot.scn")
+		var shot_res = preload("res://player/shot.xml")
 		var shot_scene = shot_res.instance()
 		shot_scene.set_pos( pos )
 		get_parent().add_child( shot_scene)
 		
 	prev_shoot = shoot
-	
 
 func exploit():
 	if (exploted):
@@ -46,3 +48,6 @@ func exploit():
 	get_node("sample").play("explosion")
 	exploted=true
 	
+func enemy_killed():
+	killed += 1
+	#get_tree().get_root().get_node("level1/info").
