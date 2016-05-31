@@ -2,12 +2,16 @@
 
 #Proyecto 01-shooter
 
+Empezamos con un shooter 2D poque nos parece un juego sencillo para empezar.
+
+#Créditos
+
 Idea original de Juan Linietsky:
 * [Proyecto Github](https://github.com/reduz/godot_workshop)
 * [Vídeo de Youtube en español](https://www.youtube.com/watch?v=XEkePR_3BU8) 
 * [English Youtube video](https://www.youtube.com/watch?v=9GPIeeJXBLc)
 
-> Empezamos con un shooter 2D poque nos parece un juego sencillo para empezar.
+Los sonidos los hemos descargado de [FreeSound](https://www.freesound.org)
 
 #Empezamos
 
