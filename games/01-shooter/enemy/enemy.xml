@@ -41,14 +41,14 @@
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "conn_count" </string>
-			<int> 1 </int>
+			<int> 2 </int>
 			<string> "conns" </string>
-			<int_array  len="6"> 				0, 0, 31, 30, 2, 0 </int_array>
+			<int_array  len="12"> 				0, 0, 36, 35, 2, 0, 4, 0, 38, 37, 2, 0 </int_array>
 			<string> "editable_instances" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "names" </string>
-			<string_array  len="32">
+			<string_array  len="39">
 				<string> "enemy" </string>
 				<string> "transform/pos" </string>
 				<string> "input/pickable" </string>
@@ -60,6 +60,9 @@
 				<string> "linear_damp" </string>
 				<string> "angular_damp" </string>
 				<string> "script/script" </string>
+				<string> "speed" </string>
+				<string> "max_speed" </string>
+				<string> "min_speed" </string>
 				<string> "Area2D" </string>
 				<string> "sprite" </string>
 				<string> "frames" </string>
@@ -79,18 +82,22 @@
 				<string> "blend_times" </string>
 				<string> "autoplay" </string>
 				<string> "AnimationPlayer" </string>
+				<string> "VisibilityNotifier2D" </string>
+				<string> "rect" </string>
 				<string> "_on_enemy_area_enter" </string>
 				<string> "area_enter" </string>
+				<string> "_on_VisibilityNotifier2D_exit_screen" </string>
+				<string> "exit_screen" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 4 </int>
+			<int> 5 </int>
 			<string> "node_paths" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="76"> 				-1, -1, 11, 0, -1, 10, 1, 0, 2, 1, 3, 2, 4, 3, 5, 4, 6, 5, 7, 6, 8, 7, 9, 8, 10, 9, 0, 0, 0, 14, 12, -1, 1, 13, 10, 0, 0, 0, 19, 15, -1, 5, 1, 11, 16, 12, 15, 2, 17, 4, 18, 13, 0, 0, 0, 29, 20, -1, 8, 21, 14, 22, 15, 23, 16, 24, 17, 25, 1, 26, 8, 27, 18, 28, 19, 0 </int_array>
+			<int_array  len="91"> 				-1, -1, 14, 0, -1, 13, 1, 0, 2, 1, 3, 2, 4, 3, 5, 4, 6, 5, 7, 6, 8, 7, 9, 8, 10, 9, 11, 10, 12, 11, 13, 12, 0, 0, 0, 17, 15, -1, 1, 16, 13, 0, 0, 0, 22, 18, -1, 5, 1, 14, 19, 15, 18, 2, 20, 4, 21, 16, 0, 0, 0, 32, 23, -1, 8, 24, 17, 25, 18, 26, 19, 27, 20, 28, 1, 29, 8, 30, 21, 31, 22, 0, 0, 0, 33, 33, -1, 1, 34, 23, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="20" shared="false">
+			<array  len="24" shared="false">
 				<vector2> 169, 118 </vector2>
 				<bool> True </bool>
 				<resource  resource_type="Shape2D" path="local://3">  </resource>
@@ -101,6 +108,9 @@
 				<real> 0.1 </real>
 				<real> 1 </real>
 				<resource  external="0">  </resource>
+				<vector2> 0, 150 </vector2>
+				<vector2> 0, 400 </vector2>
+				<vector2> 0, 100 </vector2>
 				<resource  resource_type="SpriteFrames" path="local://1">  </resource>
 				<vector2> -0.324592, 1.90259 </vector2>
 				<vector2> 3.15363, 2.98317 </vector2>
@@ -112,6 +122,7 @@
 				<array  len="0" shared="false">
 				</array>
 				<string> "wakawaka" </string>
+				<rect2> -10, -10, 20, 20 </rect2>
 			</array>
 			<string> "version" </string>
 			<int> 2 </int>
