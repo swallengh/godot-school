@@ -12,7 +12,3 @@ func _process(delta):
 	
 func _on_VisibilityNotifier2D_exit_screen():
 	queue_free()
-
-func kill_enemy():
-	
-	queue_free()

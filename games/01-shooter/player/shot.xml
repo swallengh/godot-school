@@ -1,30 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="7" version="2.0" version_name="Godot Engine v2.0.stable.official">
+<resource_file type="PackedScene" subresource_count="6" version="2.0" version_name="Godot Engine v2.0.stable.official">
 	<ext_resource path="res://player/shot.gd" type="Script" index="0"></ext_resource>
 	<ext_resource path="res://player/shot.png" type="Texture" index="1"></ext_resource>
-	<ext_resource path="res://player/laser-shot-water.wav" type="Sample" index="3"></ext_resource>
-	<ext_resource path="res://enemy/small-explosion.wav" type="Sample" index="2"></ext_resource>
+	<ext_resource path="res://player/laser-shot-water.wav" type="Sample" index="2"></ext_resource>
 	<resource type="ConvexPolygonShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
 		<vector2_array name="points" len="5"> 			6.33844, -9.89337, 1.81973, 15.5541, -1.50985, 15.7919, -6.02856, -9.65554, -0.320717, -17.5038 </vector2_array>
 
 	</resource>
 	<resource type="SampleLibrary" path="local://2">
-		<dictionary name="samples/kill-enemy" shared="false">
-			<string> "db" </string>
-			<real> 0 </real>
-			<string> "pitch" </string>
-			<real> 1 </real>
-			<string> "sample" </string>
-			<resource  external="2">  </resource>
-		</dictionary>
 		<dictionary name="samples/shot" shared="false">
 			<string> "db" </string>
 			<real> 0 </real>
 			<string> "pitch" </string>
 			<real> 1 </real>
 			<string> "sample" </string>
-			<resource  external="3">  </resource>
+			<resource  external="2">  </resource>
 		</dictionary>
 
 	</resource>
