@@ -2,6 +2,6 @@
 extends Node2D
 
 func _ready():
-	pass
+	set_mode(2)
 
 
