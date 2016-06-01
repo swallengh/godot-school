@@ -34,10 +34,10 @@ func _process(delta):
 	var shoot = Input.is_action_pressed("player_shot")
 	if (shoot and not prev_shoot):
 		var shot_res = preload("res://player/shot.xml")
-		var shot_scene = shot_res.instance()
-		shot_scene.set_pos( pos )
-		get_parent().add_child( shot_scene)
-		
+		var shot_scn = shot_res.instance()
+		pos.y = pos.y - 32
+		shot_scn.set_pos( pos )
+		get_parent().add_child( shot_scn )
 	prev_shoot = shoot
 
 func exploit():

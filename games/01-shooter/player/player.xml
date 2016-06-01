@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="10" version="2.0" version_name="Godot Engine v2.0.stable.official">
 	<ext_resource path="res://player/player.gd" type="Script" index="0"></ext_resource>
-	<ext_resource path="res://player/explosion.png" type="Texture" index="2"></ext_resource>
 	<ext_resource path="res://player/ship.png" type="Texture" index="1"></ext_resource>
+	<ext_resource path="res://player/explosion.png" type="Texture" index="2"></ext_resource>
 	<ext_resource path="res://player/explosion.wav" type="Sample" index="3"></ext_resource>
 	<resource type="ConvexPolygonShape2D" path="local://1">
 		<real name="custom_solver_bias"> 0 </real>
@@ -45,7 +45,7 @@
 			<array  len="0" shared="false">
 			</array>
 			<string> "names" </string>
-			<string_array  len="70">
+			<string_array  len="71">
 				<string> "player" </string>
 				<string> "transform/pos" </string>
 				<string> "input/pickable" </string>
@@ -69,6 +69,7 @@
 				<string> "Area2D" </string>
 				<string> "sprite" </string>
 				<string> "texture" </string>
+				<string> "__meta__" </string>
 				<string> "Sprite" </string>
 				<string> "shape" </string>
 				<string> "build_mode" </string>
@@ -123,10 +124,10 @@
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="155"> 				-1, -1, 20, 0, -1, 19, 1, 0, 2, 1, 3, 2, 4, 3, 5, 4, 6, 5, 7, 3, 8, 4, 9, 6, 10, 3, 11, 4, 12, 7, 13, 3, 14, 4, 15, 8, 16, 9, 17, 10, 18, 11, 19, 12, 0, 0, 0, 23, 21, -1, 1, 22, 13, 0, 0, 0, 29, 24, -1, 4, 25, 14, 26, 15, 27, 16, 28, 4, 0, 0, 0, 53, 30, -1, 22, 31, 17, 32, 11, 33, 18, 34, 4, 35, 19, 36, 20, 37, 21, 38, 22, 39, 23, 40, 21, 41, 21, 42, 21, 43, 24, 44, 21, 45, 21, 46, 21, 47, 21, 48, 11, 49, 11, 50, 21, 51, 11, 52, 21, 0, 0, 0, 69, 54, -1, 14, 55, 25, 56, 26, 57, 21, 58, 11, 59, 21, 60, 21, 61, 21, 62, 14, 63, 27, 64, 11, 65, 11, 66, 28, 67, 21, 68, 21, 0 </int_array>
+			<int_array  len="161"> 				-1, -1, 20, 0, -1, 19, 1, 0, 2, 1, 3, 2, 4, 3, 5, 4, 6, 5, 7, 3, 8, 4, 9, 6, 10, 3, 11, 4, 12, 7, 13, 3, 14, 4, 15, 8, 16, 9, 17, 10, 18, 11, 19, 12, 0, 0, 0, 24, 21, -1, 2, 22, 13, 23, 14, 0, 0, 0, 30, 25, -1, 5, 26, 15, 27, 16, 28, 17, 29, 4, 23, 18, 0, 0, 0, 54, 31, -1, 23, 32, 19, 33, 11, 34, 20, 35, 4, 36, 21, 37, 22, 38, 23, 39, 24, 40, 25, 41, 23, 42, 23, 43, 23, 44, 26, 45, 23, 46, 23, 47, 23, 48, 23, 49, 11, 50, 11, 51, 23, 52, 11, 53, 23, 23, 27, 0, 0, 0, 70, 55, -1, 14, 56, 28, 57, 29, 58, 23, 59, 11, 60, 23, 61, 23, 62, 23, 63, 15, 64, 30, 65, 11, 66, 11, 67, 31, 68, 23, 69, 23, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="29" shared="false">
-				<vector2> 331, 293 </vector2>
+			<array  len="32" shared="false">
+				<vector2> 524.85, 522.095 </vector2>
 				<bool> True </bool>
 				<resource  resource_type="Shape2D" path="local://1">  </resource>
 				<matrix32> 1, 0, 0, 1, 0, 0 </matrix32>
@@ -140,9 +141,17 @@
 				<real> 1 </real>
 				<resource  external="0">  </resource>
 				<resource  external="1">  </resource>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
 				<int> 0 </int>
 				<vector2_array  len="10"> 					-4.08333, -27.281, -4.08333, -15.6338, -23.8189, 23.5138, -15.7305, 34.8374, -8.93633, 31.9256, 9.82861, 31.6021, 16.2993, 33.5433, 25.3582, 22.8667, 4.32855, -15.3103, 4.32855, -27.6045 </vector2_array>
 				<vector2> 0, 3 </vector2>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
 				<int> 32 </int>
 				<real> 0.5 </real>
 				<real> 0.2 </real>
@@ -151,6 +160,10 @@
 				<real> 180 </real>
 				<real> 100 </real>
 				<real> 9.8 </real>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
 				<int> 1 </int>
 				<resource  resource_type="SampleLibrary" path="local://5">  </resource>
 				<real> 5000 </real>
