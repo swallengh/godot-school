@@ -1,6 +1,6 @@
 
 
-#02-tilesmap
+#03-tilesmap
 
 Vamos a crear una versión didáctica de un juego con un mapa 2D.
 
@@ -13,4 +13,4 @@ Vamos a crear una versión didáctica de un juego con un mapa 2D.
 
 #Empezamos
 
-* Creamos un nuevo proyecto Godot llamado `02-tilesmap`.
+* Creamos un nuevo proyecto Godot llamado `03-tilesmap`.
