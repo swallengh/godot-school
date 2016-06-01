@@ -30,7 +30,9 @@ func _on_enemy_area_enter( area ):
 	
 	if (area extends preload("res://player/shot.gd")):
 		area.queue_free()
-		get_tree().get_root().get_node("level1/sample").play("exploit_enemy")
+		var level = get_tree().get_root().get_node("level")
+		level.get_node("sample").play("exploit_enemy")
+		level.inc_pts()
 		queue_free()
 
 func _on_VisibilityNotifier2D_exit_screen():
