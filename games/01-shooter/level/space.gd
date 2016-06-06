@@ -10,8 +10,8 @@ func _ready():
 func _process(delta):
 	pos = get_pos()
 	pos.y = pos.y + speed * delta
-	if pos.y > 1200:
-		pos.y = 600
+	if pos.y > 600:
+		pos.y = 0
 	
 	set_pos(pos)
 
