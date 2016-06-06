@@ -1,28 +1,46 @@
 
 extends Area2D
 
-var speed = Vector2(0,150)
 export var max_speed = Vector2(50,400)
 export var min_speed = Vector2(0,10)
+export var max_wait_time = 0.0
+
+var speed = Vector2(0,0)
 var size = Vector2(0,0)
 var pos = Vector2(0,0)
+var wait_time = 1.0
+var total_time = 0.0
+var state = "waiting"
 
 func _ready():
 	size = get_viewport_rect().size
 	init()
-	pos.y = (randi()%int(speed.y))*-2
 	set_process(true)
 
 func init():
-	pos.x = randi()%int(size.x)
-	pos.y=0
-	#speed.x = randi()%int(max_speed.x)-int(min_speed.x)
-	speed.x= randi()%100-50
-	speed.y = randi()%int(max_speed.y)+int(min_speed.y)
+	state = "running"
+	total_time = 0.0
+	wait_time = rand_range( 0.0, max_wait_time )
+	
+	speed.x = rand_range( min_speed.x, max_speed.x )
+	speed.y = rand_range( min_speed.y, max_speed.y )
+
+	pos = Vector2(0,0)
+	if (size.x > 0):
+		pos.x = randi()%int(size.x)
 	set_pos(pos)
 
 func _process(delta):
-	translate(Vector2( speed.x * delta , speed.y * delta))
+	if (state=="waiting"):
+		hide()
+		total_time = total_time + delta
+		if (total_time > wait_time):
+			state="running"
+			show()
+		return
+		
+	if (state == "running"):
+		translate(Vector2( speed.x * delta , speed.y * delta))
 
 func _on_enemy_area_enter( area ):
 	if (area.get_name()=="player"):
@@ -34,6 +52,7 @@ func _on_enemy_area_enter( area ):
 		level.get_node("sample").play("exploit_enemy")
 		level.inc_pts()
 		init()
+		state="waiting"
 
 func _on_VisibilityNotifier2D_exit_screen():
 	init()

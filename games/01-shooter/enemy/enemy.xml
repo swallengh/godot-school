@@ -43,12 +43,12 @@
 			<string> "conn_count" </string>
 			<int> 2 </int>
 			<string> "conns" </string>
-			<int_array  len="12"> 				0, 0, 35, 34, 2, 0, 4, 0, 37, 36, 2, 0 </int_array>
+			<int_array  len="12"> 				0, 0, 37, 36, 2, 0, 4, 0, 39, 38, 2, 0 </int_array>
 			<string> "editable_instances" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "names" </string>
-			<string_array  len="38">
+			<string_array  len="40">
 				<string> "enemy" </string>
 				<string> "transform/pos" </string>
 				<string> "input/pickable" </string>
@@ -62,9 +62,11 @@
 				<string> "script/script" </string>
 				<string> "max_speed" </string>
 				<string> "min_speed" </string>
+				<string> "max_wait_time" </string>
 				<string> "Area2D" </string>
 				<string> "sprite" </string>
 				<string> "frames" </string>
+				<string> "__meta__" </string>
 				<string> "AnimatedSprite" </string>
 				<string> "shape" </string>
 				<string> "transform/scale" </string>
@@ -94,10 +96,10 @@
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="89"> 				-1, -1, 13, 0, -1, 12, 1, 0, 2, 1, 3, 2, 4, 3, 5, 4, 6, 5, 7, 6, 8, 7, 9, 8, 10, 9, 11, 10, 12, 11, 0, 0, 0, 16, 14, -1, 1, 15, 12, 0, 0, 0, 21, 17, -1, 5, 1, 13, 18, 14, 17, 2, 19, 4, 20, 15, 0, 0, 0, 31, 22, -1, 8, 23, 16, 24, 17, 25, 18, 26, 19, 27, 1, 28, 8, 29, 20, 30, 21, 0, 0, 0, 32, 32, -1, 1, 33, 22, 0 </int_array>
+			<int_array  len="97"> 				-1, -1, 14, 0, -1, 13, 1, 0, 2, 1, 3, 2, 4, 3, 5, 4, 6, 5, 7, 6, 8, 7, 9, 8, 10, 9, 11, 10, 12, 11, 13, 12, 0, 0, 0, 18, 15, -1, 2, 16, 13, 17, 14, 0, 0, 0, 23, 19, -1, 6, 1, 15, 20, 16, 19, 2, 21, 4, 22, 17, 17, 18, 0, 0, 0, 33, 24, -1, 8, 25, 19, 26, 20, 27, 21, 28, 22, 29, 1, 30, 8, 31, 23, 32, 24, 0, 0, 0, 34, 34, -1, 2, 35, 25, 17, 26, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="23" shared="false">
-				<vector2> 169, 118 </vector2>
+			<array  len="27" shared="false">
+				<vector2> 429.28, 18.5533 </vector2>
 				<bool> True </bool>
 				<resource  resource_type="Shape2D" path="local://3">  </resource>
 				<matrix32> 3.15363, -0, 0, 2.98317, -0.324592, 1.90259 </matrix32>
@@ -109,10 +111,19 @@
 				<resource  external="0">  </resource>
 				<vector2> 50, 300 </vector2>
 				<vector2> 0, 100 </vector2>
+				<real> 2 </real>
 				<resource  resource_type="SpriteFrames" path="local://1">  </resource>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
 				<vector2> -0.324592, 1.90259 </vector2>
 				<vector2> 3.15363, 2.98317 </vector2>
 				<int> 0 </int>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
 				<int> 1 </int>
 				<real> 0 </real>
 				<node_path> ".." </node_path>
@@ -121,6 +132,10 @@
 				</array>
 				<string> "wakawaka" </string>
 				<rect2> -10, -10, 20, 20 </rect2>
+				<dictionary  shared="false">
+					<string> "_edit_lock_" </string>
+					<bool> True </bool>
+				</dictionary>
 			</array>
 			<string> "version" </string>
 			<int> 2 </int>

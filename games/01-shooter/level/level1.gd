@@ -1,8 +1,9 @@
 
 extends Node2D
 
-export var max_enemies = 0
-export var max_time = 60.0
+export var max_enemies = 1
+export var max_time = 30.0
+
 var pts = 0
 var total_time = 0.0
 
@@ -18,7 +19,7 @@ func build_enemy():
 	get_node("enemies").add_child( enemy_scene )
 
 func show_pts():
-	get_node("panel/pts_text").set_text( str(pts) )
+	get_node("text/points").set_text( str(pts) )
 	
 func inc_pts():
 	pts = pts + 10
@@ -27,6 +28,6 @@ func inc_pts():
 func _process(delta):
 	total_time = total_time + delta
 	if (total_time > max_time):
-		get_tree().quit()
+		total_time = 0
+		build_enemy()
 		
-
