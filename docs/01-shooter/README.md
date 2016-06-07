@@ -2,16 +2,14 @@
 
 #Proyecto 01-shooter
 
-Empezamos con un shooter 2D poque nos parece un juego sencillo para empezar.
+Empezamos nuestros tutoriales con un shooter 2D, porque parece un juego sencillo para empezar.
 
 #Créditos
 
-* Idea original de Juan Linietsky:
+* Basado en un idea original de Juan Linietsky:
     * [Proyecto Github](https://github.com/reduz/godot_workshop)
     * [Vídeo de Youtube en español](https://www.youtube.com/watch?v=XEkePR_3BU8) 
-    * [English Youtube video](https://www.youtube.com/watch?v=9GPIeeJXBLc)  
-* Los sonidos los hemos descargado de [FreeSound](https://www.freesound.org)
-* Iconos para descargar [www.game-icons.net](www.game-icons.net)
+    * [English Youtube video](https://www.youtube.com/watch?v=9GPIeeJXBLc)   
 
 Otros enlaces de interés
 * [starwars](https://github.com/TutorialDoctor/TD-Godot-Games/tree/master/starwars)
@@ -19,24 +17,35 @@ Otros enlaces de interés
 #Empezamos
 
 * Creamos directorio para el proyecto llamado `01-shooter`.
-* Descargamos unos assets de ejemplo del URL `https://github/reduz/godot_workshop`.
+* Descargamos unos `assets` para empezar
+    * Los gráficos los descargamos de `https://github/reduz/godot_workshop`.
+    * Los sonidos se han descargado de [FreeSound](https://www.freesound.org)
+    * Los iconos se han descargado de [www.game-icons.net](www.game-icons.net)
 * Creamos un nuevo proyecto Godot `Programa Godot -> New Project`.
 * Editamos el proyecto para comenzar a crear el juego.
 
 ![project-manager](./images/project-manager.png)
 
-#Player
+#Player character
 
-* Acciones: Creamos los InputMaps en `Scene -> Project Settings -> InputMaps`
+Vamos a crear el personaje del jugador.
+
+* Creamos las **aciones**(InputMaps) en `Scene -> Project Settings -> InputMaps`
+    * Las acciones de nuestro `player` en el juego serán: `left`, `right`, `up`, `down` and `shot`.
     * Asociamos entradas con nombres de acciones que vamos a usar en nuestro juego.
 
 ![scene-project-settings-inputmaps](./images/scene-project-settings-inputmaps.png)
 
-* Creamos una **escena** para player.
-    * Nodos `Area2D` -> `Sprite`.
-    * Atributo textura -> Imagen
-* Nodo `Area2d` -> `Script` para mover la nave.
-* Hay que poner controles para los límites de la ventana (Viewport).
+* Creamos una **escena** para contener a `player` con la siguiente estructura de nodos.
+
+![player-nodes](./images/player-nodes.png)
+
+* Como nodo principal/raíz un `Area2D`.
+* Dentro un nodo `Sprite` para la imagen.
+    * En el atributo textura pondremos la imagen
+* Para darle un comportamiento a `player`, creamos un script en el nodo raíz.
+    * Este script nos permitirá controlar la nave.
+    * Consultar script [player.gd](./../../games/01-shooter/player/player.gd)
 
 * Explosión (Nombre = `player/explosion`)
     * Dentro de player añadir nodo `Particle2D`.
@@ -59,8 +68,6 @@ Otros enlaces de interés
     * Añadimos en audio conel nombre `explosion`.
     * Incorporamos código en GDScript para activar (play) el sonido cuando
     explote el jugador.
-
-![player-nodes](./images/player-nodes.png)
 
 #Enemy
 
