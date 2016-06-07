@@ -21,6 +21,7 @@ func _process(delta):
 	if (total_time > new_level_time):
 		total_time = 0
 		build_enemy()
+		build_asteroid()
 
 func build_enemy():
 	var enemy_res = preload("res://enemy/enemy.xml")
