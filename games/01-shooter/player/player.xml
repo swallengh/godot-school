@@ -45,7 +45,7 @@
 			<array  len="0" shared="false">
 			</array>
 			<string> "names" </string>
-			<string_array  len="72">
+			<string_array  len="73">
 				<string> "player" </string>
 				<string> "transform/pos" </string>
 				<string> "z/z" </string>
@@ -67,6 +67,7 @@
 				<string> "linear_damp" </string>
 				<string> "angular_damp" </string>
 				<string> "script/script" </string>
+				<string> "speed" </string>
 				<string> "Area2D" </string>
 				<string> "sprite" </string>
 				<string> "texture" </string>
@@ -125,9 +126,9 @@
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="163"> 				-1, -1, 21, 0, -1, 20, 1, 0, 2, 1, 3, 2, 4, 3, 5, 4, 6, 5, 7, 6, 8, 4, 9, 5, 10, 7, 11, 4, 12, 5, 13, 8, 14, 4, 15, 5, 16, 9, 17, 10, 18, 11, 19, 12, 20, 13, 0, 0, 0, 25, 22, -1, 2, 23, 14, 24, 15, 0, 0, 0, 31, 26, -1, 5, 27, 16, 28, 17, 29, 18, 30, 5, 24, 19, 0, 0, 0, 55, 32, -1, 23, 33, 20, 34, 12, 35, 21, 36, 5, 37, 22, 38, 23, 39, 24, 40, 25, 41, 26, 42, 24, 43, 24, 44, 24, 45, 27, 46, 24, 47, 24, 48, 24, 49, 24, 50, 12, 51, 12, 52, 24, 53, 12, 54, 24, 24, 28, 0, 0, 0, 71, 56, -1, 14, 57, 29, 58, 30, 59, 24, 60, 12, 61, 24, 62, 24, 63, 24, 64, 16, 65, 31, 66, 12, 67, 12, 68, 32, 69, 24, 70, 24, 0 </int_array>
+			<int_array  len="165"> 				-1, -1, 22, 0, -1, 21, 1, 0, 2, 1, 3, 2, 4, 3, 5, 4, 6, 5, 7, 6, 8, 4, 9, 5, 10, 7, 11, 4, 12, 5, 13, 8, 14, 4, 15, 5, 16, 9, 17, 10, 18, 11, 19, 12, 20, 13, 21, 14, 0, 0, 0, 26, 23, -1, 2, 24, 15, 25, 16, 0, 0, 0, 32, 27, -1, 5, 28, 17, 29, 18, 30, 19, 31, 5, 25, 20, 0, 0, 0, 56, 33, -1, 23, 34, 21, 35, 12, 36, 22, 37, 5, 38, 23, 39, 24, 40, 25, 41, 26, 42, 27, 43, 25, 44, 25, 45, 25, 46, 28, 47, 25, 48, 25, 49, 25, 50, 25, 51, 12, 52, 12, 53, 25, 54, 12, 55, 25, 25, 29, 0, 0, 0, 72, 57, -1, 14, 58, 30, 59, 31, 60, 25, 61, 12, 62, 25, 63, 25, 64, 25, 65, 17, 66, 32, 67, 12, 68, 12, 69, 33, 70, 25, 71, 25, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="33" shared="false">
+			<array  len="34" shared="false">
 				<vector2> 524.85, 522.095 </vector2>
 				<int> 3 </int>
 				<bool> True </bool>
@@ -142,6 +143,7 @@
 				<real> 0.1 </real>
 				<real> 1 </real>
 				<resource  external="0">  </resource>
+				<int> 200 </int>
 				<resource  external="1">  </resource>
 				<dictionary  shared="false">
 					<string> "_edit_lock_" </string>

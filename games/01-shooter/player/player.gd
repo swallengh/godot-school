@@ -1,12 +1,18 @@
 
 extends Area2D
 
-const SPEED = 200
+export var speed = 200
 var exploted = false
 var prev_shoot = false
 var total_time = 0
+var screen = null
 
 func _ready():
+	screen = get_viewport_rect()
+	var pos = screen.size #get the screen size
+	pos.x = pos.x/2
+	pos.y = pos.y - pos.y/4
+	set_pos(pos) #set player position
 	set_process(true)
 
 func _process(delta):
@@ -28,11 +34,10 @@ func _process(delta):
 		dir+=Vector2(1,0)
 	
 	var pos = get_pos()
-	pos+=dir * delta * SPEED #This is our new position
+	pos+=dir * delta * speed #This is our new position
 	
-	var size = get_viewport_rect().size
-	pos.x = clamp(pos.x, 0, size.x) #The player can't exit screen
-	pos.y = clamp(pos.y, 0, size.y)
+	pos.x = clamp(pos.x, 0, screen.size.x) #The player can't exit screen
+	pos.y = clamp(pos.y, 0, screen.size.y)
 	set_pos(pos) #set our new position, move the player
 	
 	var shoot = Input.is_action_pressed("player_shot")

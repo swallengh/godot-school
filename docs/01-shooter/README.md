@@ -20,6 +20,7 @@ Otros enlaces de interés
 * Descargamos unos `assets` para empezar
     * Los gráficos los descargamos de `https://github/reduz/godot_workshop`.
     * Los sonidos se han descargado de [FreeSound](https://www.freesound.org)
+        * Convertimos el fichero en formato WAV de 16 bits.
     * Los iconos se han descargado de [www.game-icons.net](www.game-icons.net)
 * Creamos un nuevo proyecto Godot `Programa Godot -> New Project`.
 * Editamos el proyecto para comenzar a crear el juego.
@@ -43,11 +44,7 @@ Vamos a crear el personaje del jugador.
 * Como nodo principal/raíz un `Area2D`.
 * Dentro un nodo `Sprite` para la imagen.
     * En el atributo textura pondremos la imagen
-* Para darle un comportamiento a `player`, creamos un script en el nodo raíz.
-    * Este script nos permitirá controlar la nave.
-    * Consultar script [player.gd](./../../games/01-shooter/player/player.gd)
-
-* Explosión (Nombre = `player/explosion`)
+* Explosión (`/explosion`)
     * Dentro de player añadir nodo `Particle2D`.
     * Texture poner la imagen.
     * Spread 180
@@ -55,21 +52,22 @@ Vamos a crear el personaje del jugador.
     * Lifetime 1
     * Explosiven 0.2
     * Timeout 0.5
-* Colisiones
+* Colisiones (`shape`)
     * Añadimos un nodo `CollisionPolygon2D`
     * Creamos una forma poligonal de colisión.
     * Guardamos la escena `player`.
-* Sonido (`player/sample`)
-    * Nos descargamos un sonido de explosión de `https://www.freesound.org`.
-    * Convertimos el fichero en formato WAV de 16 bits.
+* Sonido (`sample`)
     * Guardamos el fichero de sonido en la carpeta `player` del proyecto.
     * Añadimos nodo `SamplePlayer` y lo llamamos `sample`
     * Vamos a `Config -> Sample -> New SampleLibrary`
     * Añadimos en audio conel nombre `explosion`.
     * Incorporamos código en GDScript para activar (play) el sonido cuando
     explote el jugador.
+* Para darle un comportamiento a `player`, creamos un **script** en el nodo raíz.
+    * Este script nos permitirá controlar la nave.
+    * Consultar script [player.gd](./../../games/01-shooter/player/player.gd).
 
-#Enemy
+#Enemy character
 
 * Creamos una nueva **escena** para `enemy`.
 * Creamos un nodo raíz del tipo `Area2D`.
