@@ -11,13 +11,15 @@ var pos = Vector2(0,0)
 var wait_time = 1.0
 var total_time = 0.0
 var state = "waiting"
+var level = null
 
 func _ready():
 	size = get_viewport_rect().size
+	level = get_tree().get_root().get_node("level")
 	init()
 	set_process(true)
 
-func init():
+func init(): #Initialize the enemy attributes
 	state = "running"
 	total_time = 0.0
 	wait_time = rand_range( 0.0, max_wait_time )
@@ -31,6 +33,7 @@ func init():
 	set_pos(pos)
 
 func _process(delta):
+	#The enemy must wait a time before go into screen again
 	if (state=="waiting"):
 		hide()
 		total_time = total_time + delta
@@ -38,21 +41,23 @@ func _process(delta):
 			state="running"
 			show()
 		return
-		
+	
+	#Translate/move the enemy
 	if (state == "running"):
 		translate(Vector2( speed.x * delta , speed.y * delta))
 
 func _on_enemy_area_enter( area ):
+	#The enemy collides with our player
 	if (area.get_name()=="player"):
 		area.exploit()
 	
+	# The enemy collides with an shot object
 	if (area extends preload("res://player/shot.gd")):
-		area.queue_free()
-		var level = get_tree().get_root().get_node("level")
-		level.get_node("sample").play("exploit_enemy")
-		level.inc_pts()
-		init()
+		area.queue_free() #The shot disappear
+		get_node("sample").play("exploit") #Play explosion sound
+		level.inc_pts() #Increment player points
+		init() #Initialize this enemy
 		state="waiting"
 
 func _on_VisibilityNotifier2D_exit_screen():
-	init()
+	init() #When the enemy exit screen then initialize it
