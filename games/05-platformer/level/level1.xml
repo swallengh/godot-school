@@ -13,14 +13,13 @@
 			<array  len="0" shared="false">
 			</array>
 			<string> "names" </string>
-			<string_array  len="14">
+			<string_array  len="13">
 				<string> "level" </string>
 				<string> "script/script" </string>
 				<string> "Node2D" </string>
 				<string> "player" </string>
-				<string> "transform/pos" </string>
-				<string> "mass" </string>
 				<string> "platform" </string>
+				<string> "transform/pos" </string>
 				<string> "platform1" </string>
 				<string> "platform2" </string>
 				<string> "platform3" </string>
@@ -35,13 +34,11 @@
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="92"> 				-1, -1, 2, 0, -1, 1, 1, 0, 0, 0, 0, 2147483647, 3, 1, 2, 4, 2, 5, 3, 0, 0, 0, 2147483647, 6, 4, 1, 4, 5, 0, 0, 0, 2147483647, 7, 4, 1, 4, 6, 0, 0, 0, 2147483647, 8, 4, 1, 4, 7, 0, 0, 0, 2147483647, 9, 4, 1, 4, 8, 0, 0, 0, 2147483647, 10, 4, 1, 4, 9, 0, 0, 0, 2147483647, 11, 4, 1, 4, 10, 0, 0, 0, 2147483647, 12, 4, 1, 4, 11, 0, 0, 0, 2147483647, 13, 4, 1, 4, 12, 0 </int_array>
+			<int_array  len="88"> 				-1, -1, 2, 0, -1, 1, 1, 0, 0, 0, 0, 2147483647, 3, 1, 0, 0, 0, 0, 2147483647, 4, 2, 1, 5, 3, 0, 0, 0, 2147483647, 6, 2, 1, 5, 4, 0, 0, 0, 2147483647, 7, 2, 1, 5, 5, 0, 0, 0, 2147483647, 8, 2, 1, 5, 6, 0, 0, 0, 2147483647, 9, 2, 1, 5, 7, 0, 0, 0, 2147483647, 10, 2, 1, 5, 8, 0, 0, 0, 2147483647, 11, 2, 1, 5, 9, 0, 0, 0, 2147483647, 12, 2, 1, 5, 10, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="13" shared="false">
+			<array  len="11" shared="false">
 				<resource  external="0">  </resource>
 				<resource  external="1">  </resource>
-				<vector2> 408.21, 35.684 </vector2>
-				<real> 1.080612 </real>
 				<resource  external="2">  </resource>
 				<vector2> 465.474, 311.683 </vector2>
 				<vector2> 299.38, 375.25 </vector2>
