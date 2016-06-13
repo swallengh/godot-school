@@ -143,7 +143,7 @@
 				<real> 0.1 </real>
 				<real> 1 </real>
 				<resource  external="0">  </resource>
-				<int> 200 </int>
+				<int> 300 </int>
 				<resource  external="1">  </resource>
 				<dictionary  shared="false">
 					<string> "_edit_lock_" </string>
