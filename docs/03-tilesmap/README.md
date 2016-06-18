@@ -1,5 +1,5 @@
 
-![logo](../../games/03-tilemap/icon.png)
+![logo](../../games/03-tilesmap/icon.png)
 
 #03-tilesmap
 
