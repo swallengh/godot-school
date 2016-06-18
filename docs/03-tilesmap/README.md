@@ -1,4 +1,5 @@
 
+![logo](../../games/03-tilemap/icon.png)
 
 #03-tilesmap
 
@@ -12,8 +13,8 @@ Vamos a crear una versión didáctica de un juego con un mapa 2D.
     * [Pokemon Clone](https://github.com/MarianoGnu/Pokemon-Tutorials)
     * [TD-Godot-Games](https://github.com/TutorialDoctor/TD-Godot-Games)
 
-
 Esquema de trabajo:
+
 1. Idea
 2. Assets
 3. Crear objetos individuales
