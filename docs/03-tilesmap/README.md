@@ -17,8 +17,8 @@ Esquema de trabajo:
 
 1. Idea
 2. Assets
-3. Crear objetos individuales
-4. Unirlos todos en una escenea
+3. Crear mundo/personajes/objetos
+4. Lo unimos todos
 5. Añadir Scripts
 6. Volver al paso 1
 
@@ -41,3 +41,16 @@ se mueva por el mapa e interactúe con algún objeto. Elementos:
     * `03-tilesmap\sprites`
 
 > La parte de crear nuestros propios diseños no se va a tratar en este tutorial.
+
+#Crear personajes/objetos
+
+* Empezamos creando el mundo
+* luego nuestro player
+* y finalmente creamos la caja del tesoro
+
+##El mundo
+
+El mundo será un mapa de tiles 2D.
+
+* GodotEngine -> Editamos proyecto
+* Creamos nueva escena
