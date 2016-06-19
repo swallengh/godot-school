@@ -59,6 +59,14 @@ El mundo será un mapa de tiles 2D. Lo creamos en 3 pasos:
 
 * GodotEngine -> Editamos proyecto
 * Creamos nueva escena `sprites\sprites_set.xml` (Nodo2D)
+    * Creamos nodo hijo `ground` del tipo `Sprite`.
+        * Textura -> load image `sprites/tileset.png`
+        * Region = On
+        * Seleccionar región 0,0,32,32
+    * Hacemos lo mismo con `grass`, `block` y `block` cambiando los valores XY de la región.
+    * `block` y `block2` van a ser celdas que provocarán colisiones con el player, entonces
+    añadimos a `block` nodo hijo del tipo `StaticBody2D` y otro nodo hijo del tipo 
+    `Collision Shape2D`.
 
 > Cuando guardamos las escenas elegimos el formato XML, porque estamos usando 
 GitHub para guardar el proyecto, y cuando los ficheros tienen texto plano
@@ -76,6 +84,7 @@ la herramienta de control de versiones Git hace mejor su trabajo.
 * Nodo hijo `map1` de tipo `TileMap`.
     * Cargamos el tileset que ya teníamos en este mapa
     * TileMap -> Atributo TileSet -> Load = Fichero `level/tileset1.xml`
+    * Cell -> Size = 32,32
     * Creamos el mapa
 
 ![edit_map1](./files/edit_map1.png)
