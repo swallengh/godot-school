@@ -12,6 +12,7 @@ Créditos:
 * Otros proyectos inspiradores:
     * [Pokemon Clone](https://github.com/MarianoGnu/Pokemon-Tutorials)
     * [TD-Godot-Games](https://github.com/TutorialDoctor/TD-Godot-Games)
+* Vídeo [How to make a TileMap](https://www.youtube.com/watch?v=WwfIlut7X5I)
 
 Esquema de trabajo:
 
@@ -69,13 +70,12 @@ El mundo será un mapa de tiles 2D. Lo creamos en 3 pasos:
 
 * `block` y `block2` van a ser celdas que provocarán colisiones con el player, por eso
 les añadimos dos subnodos hijo:
-    * `StaticBody2D`: Nodo que aporta propiedades físicas 
-    * `Collision Shape2D`: Nodo que aporta la forma/superficie de collisión.
+    * `StaticBody2D`: Este nodo porta propiedades físicas a los bloques. 
+    * `Collision Shape2D`: Este nodo aporta/define la forma/superficie de collisión.
 
 > Cuando guardamos las escenas elegimos el formato XML, porque estamos usando 
 GitHub para guardar el proyecto, y cuando los ficheros tienen texto plano
 la herramienta de control de versiones Git hace mejor su trabajo.
-
 
 **Creamos el objeto Tileset**
 
@@ -92,3 +92,30 @@ la herramienta de control de versiones Git hace mejor su trabajo.
 
 ![edit_map1](./files/edit_map1.png)
 
+##3.2 El jugador
+
+* Creamos una nueva escena `player/player.xml`, con nodo raíz de tipo `RigidBody2D`
+    * Queremos que este objeto esté regulado por el motor de física.
+* Creamos subnodos hijos:
+    * `sprite` nodo de tipo `Sprite`
+        * Atributo texture = imagen `sprites/human-orange/idle-down.png`
+    * `shape` nodo de tipo `CollisionShape2D`
+
+Vamos a programar un comportamiento del player para que responda a las
+acciones del teclado/joystick.
+
+* Vamos a `Project Settings -> InputMap` y añadimos las acciones: `player_left`,
+`player_right`, `player_up` y `player_down`.
+* Volvemos a la escena `player` y creamos un script `player/player.gd`.
+     * Consultar script [player.gd](../../games/03-tilesmap/player/player.gd)
+
+Vemos que el código es muy sencillo, simplemente lee las acciones de entrada
+y responde aplicando velocidad al objeto `player`.
+
+##3.3 El tesoro
+
+El tesoro lo creamos a partir de una copia del `player`, y hacemos algunos cambios.
+* La escena se graba con `level/box.xml`.
+* Cambiamos el nodo `sprite` poniendo atributo textura con la imagen del tesoro.
+* Quitamos el atributo script del nodo raíz y lo dejamos vacío.
+    * Es tesoro no tiene un comportamiento programado, por ahora.
