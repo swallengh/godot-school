@@ -64,6 +64,9 @@ El mundo será un mapa de tiles 2D. Lo creamos en 3 pasos:
         * Region = On
         * Seleccionar región 0,0,32,32
     * Hacemos lo mismo con `grass`, `block` y `block` cambiando los valores XY de la región.
+
+![scene_sprites_set](./files/scene_sprites_set.png)
+
     * `block` y `block2` van a ser celdas que provocarán colisiones con el player, entonces
     añadimos a `block` nodo hijo del tipo `StaticBody2D` y otro nodo hijo del tipo 
     `Collision Shape2D`.
@@ -72,7 +75,6 @@ El mundo será un mapa de tiles 2D. Lo creamos en 3 pasos:
 GitHub para guardar el proyecto, y cuando los ficheros tienen texto plano
 la herramienta de control de versiones Git hace mejor su trabajo.
 
-![scene_sprites_set](./files/scene_sprites_set.png)
 
 **Creamos el objeto Tileset**
 
