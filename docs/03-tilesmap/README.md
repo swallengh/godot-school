@@ -20,8 +20,7 @@ Esquema de trabajo:
 2. Assets
 3. Crear mundo/personajes/objetos
 4. Lo unimos todos
-5. Añadir Scripts
-6. Volver al paso 1
+5. Volver al paso 1
 
 #1. Idea
 
@@ -92,6 +91,8 @@ la herramienta de control de versiones Git hace mejor su trabajo.
 
 ![edit_map1](./files/edit_map1.png)
 
+* Grabamos la escena (`CTRL+S`)
+
 ##3.2 El jugador
 
 * Creamos una nueva escena `player/player.xml`, con nodo raíz de tipo `RigidBody2D`
@@ -109,13 +110,18 @@ acciones del teclado/joystick.
 * Volvemos a la escena `player` y creamos un script `player/player.gd`.
      * Consultar script [player.gd](../../games/03-tilesmap/player/player.gd)
 
-Vemos que el código es muy sencillo, simplemente lee las acciones de entrada
-y responde aplicando velocidad al objeto `player`.
+> Vemos que el código es muy sencillo, simplemente lee las acciones de entrada
+y responde aplicando un cambio de posición al personaje `player`.
 
 ##3.3 El tesoro
 
-El tesoro lo creamos a partir de una copia del `player`, y hacemos algunos cambios.
+El tesoro lo creamos de forma muy parecida al `player`.
+* Nodo raíz `RigidBody2D`
+* Nodo hijo `sprite` poniendo atributo textura con la imagen del tesoro.
+* Nodo hijo `shape` del tipo `CollisionShape2D`.
 * La escena se graba con `level/box.xml`.
-* Cambiamos el nodo `sprite` poniendo atributo textura con la imagen del tesoro.
-* Quitamos el atributo script del nodo raíz y lo dejamos vacío.
-    * Es tesoro no tiene un comportamiento programado, por ahora.
+
+> La diferencia con respecto a player, es que este objeto de momento 
+no tendrá script asociado, para definir comportamiento.
+
+#4. Lo unimos todo
