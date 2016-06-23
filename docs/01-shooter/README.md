@@ -14,18 +14,32 @@ Empezamos nuestros tutoriales con un shooter 2D, porque parece un juego sencillo
 Otros enlaces de interés
 * [starwars](https://github.com/TutorialDoctor/TD-Godot-Games/tree/master/starwars)
 
-#Empezamos
+Esquema de trabajo:
+1. Idea
+2. Assets
+3. Crear personajes
+4. Lo unimos todos
+5. Volver al paso 1
+
+#1. La idea
+
+Vamos a crear un minijuego de marcianitos 2D.
 
 * Creamos directorio para el proyecto llamado `01-shooter`.
-* Descargamos unos `assets` para empezar
-    * Los gráficos los descargamos de `https://github/reduz/godot_workshop`.
-    * Los sonidos se han descargado de [FreeSound](https://www.freesound.org)
-        * Convertimos el fichero en formato WAV de 16 bits.
-    * Los iconos se han descargado de [www.game-icons.net](www.game-icons.net)
 * Creamos un nuevo proyecto Godot `Programa Godot -> New Project`.
 * Editamos el proyecto para comenzar a crear el juego.
 
 ![project-manager](./images/project-manager.png)
+
+#2. Assets
+
+Descargamos unos `assets` para empezar:
+* Los gráficos los descargamos de `https://github/reduz/godot_workshop`.
+* Los sonidos se han descargado de [FreeSound](https://www.freesound.org)
+   * Convertimos el fichero en formato WAV de 16 bits.
+* Los iconos se han descargado de [www.game-icons.net](www.game-icons.net)
+
+#3. Creando los personajes
 
 #Player character
 
