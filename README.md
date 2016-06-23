@@ -42,3 +42,5 @@ El proceso de instalación es muy sencillo:
 Los documentos están el el directorio `docs`, y los juegos en el directorio `games`.
 
 * [Game 01 - Shooter](./docs/01-shooter/README.md)
+* Game 02 - Empty
+* [Game 03 - TilesMap](./docs/03-tilesmap/README.md)
