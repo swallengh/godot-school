@@ -116,8 +116,10 @@ Vamos a crear una nueva escena para que sea el disparo del player.
 * Le creamos un script al `shot` para programarle un comportamiento.
     * El comportamiento del disparo será que en cuanto se cree, debe
     desplazarse hacia la la parte superior de la pantalla.
+    [Ver shot.gd](../../games/01-shooter/player/shot.gd).
     * En disparo se destruye cuando colisiona con un enemigo o sale de la pantalla.
-    * El enemigo al recibir un disparo (colisionar con la bala) también debe desaparecer. [Ver el código](../../game-01.shooter/enemy/enemy.gd).
+    * El enemigo al recibir un disparo (colisionar con la bala) también debe desaparecer. 
+    [Ver enemy.gd](../../games/01-shooter/enemy/enemy.gd).
 * Añadimos nodo hijo `VisibilityNotifier2D`
     * Lo conectamos a  `exit_screen` del script de `shot`.
     * En el código liberamos el recurso (`queue_free`).
