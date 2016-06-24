@@ -17,7 +17,7 @@ Otros enlaces de interés
 Esquema de trabajo:
 1. Idea
 2. Assets
-3. Crear personajes
+3. Crear personajes: player, enemy, asteroid
 4. Lo unimos todos
 5. Volver al paso 1
 
@@ -41,13 +41,15 @@ Descargamos unos `assets` para empezar:
 
 #3. Creando los personajes
 
-#Player character
+##3.1 Player character
 
-Vamos a crear el personaje del jugador.
+Vamos a crear el personaje del jugador, que es nuestra nave espacial.
+
+**Acciones**
 
 * Creamos las **aciones**(InputMaps) en `Scene -> Project Settings -> InputMaps`
     * Las acciones de nuestro `player` en el juego serán: `left`, `right`, `up`, `down` and `shot`.
-    * Asociamos entradas con nombres de acciones que vamos a usar en nuestro juego.
+    * Asociamos cada acción con entradas de teclado/joystick.
 
 ![scene-project-settings-inputmaps](./images/scene-project-settings-inputmaps.png)
 
@@ -55,9 +57,15 @@ Vamos a crear el personaje del jugador.
 
 ![player-nodes](./images/player-nodes.png)
 
-* Como nodo principal/raíz un `Area2D`.
-* Dentro un nodo `Sprite` para la imagen.
-    * En el atributo textura pondremos la imagen
+**Nodo raíz**
+
+* Como nodo principal/raíz `player`de tipo `Area2D`.
+* Dentro creamos un nodo hijo `sprite`de tipo `Sprite`.
+    * En el atributo textura asociamos el fichero de la imagen.
+* Nodo hijo `shape`de tipo `CollisionPolygon2D`.
+    * Creamos una forma poligonal de colisión.
+* Guardamos la escena `player` como `res://player/player.xml`
+
 * Explosión (`/explosion`)
     * Dentro de player añadir nodo `Particle2D`.
     * Texture poner la imagen.
@@ -66,10 +74,6 @@ Vamos a crear el personaje del jugador.
     * Lifetime 1
     * Explosiven 0.2
     * Timeout 0.5
-* Colisiones (`shape`)
-    * Añadimos un nodo `CollisionPolygon2D`
-    * Creamos una forma poligonal de colisión.
-    * Guardamos la escena `player`.
 * Sonido (`sample`)
     * Guardamos el fichero de sonido en la carpeta `player` del proyecto.
     * Añadimos nodo `SamplePlayer` y lo llamamos `sample`
@@ -77,30 +81,53 @@ Vamos a crear el personaje del jugador.
     * Añadimos en audio conel nombre `explosion`.
     * Incorporamos código en GDScript para activar (play) el sonido cuando
     explote el jugador.
+
+**Scripting**
+
 * Para darle un comportamiento a `player`, creamos un **script** en el nodo raíz.
     * Este script nos permitirá controlar la nave.
+    * En función de las entradas teclado/joystick se producirán unos movimientos u otros de la nave.
     * Consultar script [player.gd](./../../games/01-shooter/player/player.gd).
 
-#Enemy character
+##3.2 Enemy character
 
-* Creamos una nueva **escena** para `enemy`.
-* Creamos un nodo raíz del tipo `Area2D`.
-* Añadimos nodo `AnimatedSprite`
+* Creamos una nueva **escena** para `enemy`, la guardamos como `res://enemy/enemy.xml`
+
+* Creamos un nodo raíz `enemy` de tipo `Area2D`.
+* Añadimos nodo hijo `anim` de tipo `AnimatedSprite`.
     * En `frames` añadimos las imágenes que forman parte de la animación.
 * Añadimos nodo `AnimationPlayer`
     * Nueva
     * Lápiz -> Keys
     * activar Autoplay
-* Añadimos un nodo `CollisionShape2D`
+* Añadimos un nodo `shape`de tipo `CollisionShape2D`
     * Shape de tipo circle2D.
 * Señales: Crear señal desde `Area2D`
     * Enemy area -> Script
 
-#Level
+##3.3 Disparo
+
+Vamos a crear una nueva escena para que sea el disparo del player.
+
+* Creamos nueva escena `shot`y la guardamos en `res:/player/shot.xml`
+* Creamos nodo raíz `shot` de tipo `Area2D`.
+* Añadimos nodo hijo `sprite` de tipo `Sprite`.
+* Añadimos nodo hijo `shape` de tipo `CollisionPoligon2D`.
+* Le creamos un script al `shot` para programarle un comportamiento.
+    * El comportamiento del disparo será que en cuanto se cree, debe
+    desplazarse hacia la la parte superior de la pantalla.
+    * En disparo se destruye cuando colisiona con un enemigo o sale de la pantalla.
+    * El enemigo al recibir un disparo (colisionar con la bala) también debe desaparecer. [Ver el código](../../game-01.shooter/enemy/enemy.gd).
+* Añadimos nodo hijo `VisibilityNotifier2D`
+    * Lo conectamos a  `exit_screen` del script de `shot`.
+    * En el código liberamos el recurso (`queue_free`).
+
+#4. Lo unimos todo
 
 Creamos un nivel para usar los personajes creados anteriormente.
 
-* Creamos una escena nueva `Node2D` llamada `level1`.
+* Creamos una escena nueva `level1` y la guardamos en `res://level/level1.xml`
+* Creamos nodo raíz `level1` de tipo `Node2D`.
 * Instanciamos los objetos que hemos creado: `player` y `enemy`.
 * Los enemigos se pueden instanciar/copiar muchas veces para tener más.
 * Creamos un `Node2D` llamado `enemies` y ponemos como hijos de este ( acción `reparent`)
@@ -112,18 +139,6 @@ enemigos como un ejército.
     * Ponemos de tiempo 10 segundos para la animación.
     * En el segundo 10, movemos el ejército y creamos un segundo key final.
 
-#Disparo
-
-Vamos a crear una nueva escena para que sea el disparo del player.
-* Creamos nueva escena con nodo base `Area2D` y lo llamaremos shot.
-* Añadimos `sprite`.
-* Añadimos `CollisionPoligon2D`.
-* Le creamos un script al `shot` para que cambie la posición.
-* Añadimos nodo `VisibilityNotifier2D`
-    * Lo conectamos a  `exit_screen` del script de `shot`.
-    * En el código liberamos el recurso (`queue_free`).
-* En el enemigo al recibir un disparo debe desaparecer. Ver el código.
-* Creamos acción de disparar en `project settings -> InputMaps`.
 
 #TODO
 
