@@ -96,12 +96,15 @@ Vamos a crear el personaje del jugador, que es nuestra nave espacial.
 * Creamos un nodo raíz `enemy` de tipo `Area2D`.
 * Añadimos nodo hijo `anim` de tipo `AnimatedSprite`.
     * En `frames` añadimos las imágenes que forman parte de la animación.
-* Añadimos nodo `AnimationPlayer`
+* Añadimos nodo `anim` de tipo `AnimationPlayer`. Sirve para dar animación cambiando la imagen todo el rato.
     * Nueva
     * Lápiz -> Keys
     * activar Autoplay
-* Añadimos un nodo `shape`de tipo `CollisionShape2D`
+* Añadimos un nodo hijo `shape` de tipo `CollisionShape2D`
     * Shape de tipo circle2D.
+* Anadimos compartamiento al enemigo con un script.
+    * El enemigo al recibir un disparo (colisionar con la bala) debe desaparecer. 
+    [Ver enemy.gd](../../games/01-shooter/enemy/enemy.gd).
 * Señales: Crear señal desde `Area2D`
     * Enemy area -> Script
 
@@ -117,9 +120,7 @@ Vamos a crear una nueva escena para que sea el disparo del player.
     * El comportamiento del disparo será que en cuanto se cree, debe
     desplazarse hacia la la parte superior de la pantalla.
     [Ver shot.gd](../../games/01-shooter/player/shot.gd).
-    * En disparo se destruye cuando colisiona con un enemigo o sale de la pantalla.
-    * El enemigo al recibir un disparo (colisionar con la bala) también debe desaparecer. 
-    [Ver enemy.gd](../../games/01-shooter/enemy/enemy.gd).
+    * En disparo se autodestruye cuando sale de la pantalla.
 * Añadimos nodo hijo `VisibilityNotifier2D`
     * Lo conectamos a  `exit_screen` del script de `shot`.
     * En el código liberamos el recurso (`queue_free`).
