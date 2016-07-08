@@ -1,5 +1,5 @@
 
-![logo](../../games/03-tilesmap/icon.png)
+![logo](../../games/02-tilesmap/icon.png)
 
 #Juego de Tilesmap
 
@@ -29,7 +29,7 @@ se mueva por el mapa e interactúe con algún objeto. Elementos:
     * Mapa/tiles (Suelos, paredes, hierba, etc.)
     * Player
     * Objeto (Por ejemplo una caja o un tesoro)
-* Creamos una carpeta `03-tilesmap` y dentro creamos un nuevo proyecto Godot.
+* Creamos una carpeta `02-tilesmap` y dentro creamos un nuevo proyecto Godot.
 
 #2. Assets
 
@@ -38,7 +38,7 @@ se mueva por el mapa e interactúe con algún objeto. Elementos:
 	* Ficheros `sprites\human-orange\*.png`
 	* Ficheros `sprites\goblin-brown\*.png`
 * Los copiamos en un directorio `sprites` dentro de nuestro proyecto Godot.
-    * `03-tilesmap\sprites`
+    * `02-tilesmap\sprites`
 
 > La parte de crear nuestros propios diseños no se va a tratar en este tutorial.
 
@@ -108,7 +108,7 @@ acciones del teclado/joystick.
 * Vamos a `Project Settings -> InputMap` y añadimos las acciones: `player_left`,
 `player_right`, `player_up` y `player_down`.
 * Volvemos a la escena `player` y creamos un script `player/player.gd`.
-     * Consultar script [player.gd](../../games/03-tilesmap/player/player.gd)
+     * Consultar script [player.gd](../../games/02-tilesmap/player/player.gd)
 
 > Vemos que el código es muy sencillo, simplemente lee las acciones de entrada
 y responde aplicando un cambio de posición al personaje `player`.
