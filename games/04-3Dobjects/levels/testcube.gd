@@ -15,6 +15,10 @@ func _process(delta):
 		dir.x = dir.x - speed * delta
 	if Input.is_action_pressed("camera_right"):
 		dir.x = dir.x + speed * delta
+	if Input.is_action_pressed("camera_up"):
+		dir.y = dir.y + speed * delta
+	if Input.is_action_pressed("camera_down"):
+		dir.y = dir.y - speed * delta
 
 	camera.translate(dir)
 
