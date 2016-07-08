@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="3" version="2.0" version_name="Godot Engine v2.0.stable.official">
+<resource_file type="PackedScene" subresource_count="4" version="2.0" version_name="Godot Engine v2.0.stable.official">
 	<ext_resource path="res://objects/Stormtrooper.msh" type="Mesh" index="0"></ext_resource>
+	<resource type="MaterialShader" path="local://2">
+		<dictionary name="_code" shared="false">
+			<string> "fragment" </string>
+			<string> "" </string>
+			<string> "fragment_ofs" </string>
+			<int> 0 </int>
+			<string> "light" </string>
+			<string> "" </string>
+			<string> "light_ofs" </string>
+			<int> 0 </int>
+			<string> "vertex" </string>
+			<string> "" </string>
+			<string> "vertex_ofs" </string>
+			<int> 0 </int>
+		</dictionary>
+
+	</resource>
 	<resource type="ShaderMaterial" path="local://1">
 		<bool name="flags/visible"> True </bool>
 		<bool name="flags/double_sided"> False </bool>
@@ -12,7 +29,8 @@
 		<int name="params/blend_mode"> 0 </int>
 		<int name="params/depth_draw"> 1 </int>
 		<real name="params/line_width"> 0 </real>
-		<resource name="shader/shader"></resource>
+		<resource name="shader/shader" resource_type="Shader" path="local://2">  </resource>
+
 	</resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
@@ -24,10 +42,10 @@
 			<array  len="0" shared="false">
 			</array>
 			<string> "names" </string>
-			<string_array  len="55">
+			<string_array  len="53">
 				<string> "node" </string>
 				<string> "Node" </string>
-				<string> "cube" </string>
+				<string> "mesh" </string>
 				<string> "_import_transform" </string>
 				<string> "transform/local" </string>
 				<string> "layers" </string>
@@ -44,8 +62,6 @@
 				<string> "geometry/visible_in_all_rooms" </string>
 				<string> "geometry/use_baked_light" </string>
 				<string> "geometry/baked_light_tex_id" </string>
-				<string> "TestCube" </string>
-				<string> "mesh" </string>
 				<string> "mesh/mesh" </string>
 				<string> "mesh/skeleton" </string>
 				<string> "MeshInstance" </string>
@@ -82,31 +98,30 @@
 				<string> "shadow/zoffset_scale" </string>
 			</string_array>
 			<string> "node_count" </string>
-			<int> 5 </int>
+			<int> 4 </int>
 			<string> "node_paths" </string>
 			<array  len="0" shared="false">
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="169"> 				-1, -1, 1, 0, -1, 0, 0, 0, 0, 19, 2, -1, 16, 3, 0, 4, 1, 5, 2, 6, 3, 7, 4, 8, 3, 9, 3, 10, 5, 11, 5, 12, 5, 13, 6, 14, 6, 15, 6, 16, 6, 17, 6, 18, 7, 0, 0, 0, 23, 20, -1, 18, 3, 0, 4, 8, 5, 2, 6, 3, 7, 9, 8, 3, 9, 3, 10, 5, 11, 5, 12, 5, 13, 6, 14, 6, 15, 6, 16, 6, 17, 6, 18, 7, 21, 10, 22, 11, 0, 0, 0, 35, 24, -1, 12, 3, 0, 4, 12, 25, 7, 26, 13, 27, 14, 28, 15, 29, 2, 30, 6, 31, 16, 32, 9, 33, 5, 34, 5, 0, 0, 0, 36, 36, -1, 21, 3, 0, 4, 17, 5, 2, 37, 3, 38, 6, 39, 7, 40, 18, 41, 19, 42, 19, 43, 6, 44, 5, 45, 20, 46, 5, 47, 13, 48, 18, 49, 9, 50, 7, 51, 7, 52, 5, 53, 21, 54, 22, 0 </int_array>
+			<int_array  len="130"> 				-1, -1, 1, 0, -1, 0, 0, 0, 0, 21, 2, -1, 18, 3, 0, 4, 1, 5, 2, 6, 3, 7, 4, 8, 3, 9, 3, 10, 5, 11, 5, 12, 5, 13, 6, 14, 6, 15, 6, 16, 6, 17, 6, 18, 7, 19, 8, 20, 9, 0, 0, 0, 33, 22, -1, 12, 3, 0, 4, 10, 23, 7, 24, 11, 25, 12, 26, 13, 27, 2, 28, 6, 29, 14, 30, 15, 31, 5, 32, 5, 0, 0, 0, 34, 34, -1, 21, 3, 0, 4, 16, 5, 2, 35, 3, 36, 6, 37, 7, 38, 17, 39, 18, 40, 18, 41, 6, 42, 5, 43, 19, 44, 5, 45, 11, 46, 17, 47, 15, 48, 7, 49, 7, 50, 5, 51, 20, 52, 21, 0 </int_array>
 			<string> "variants" </string>
-			<array  len="23" shared="false">
+			<array  len="22" shared="false">
 				<transform> 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 </transform>
-				<transform> 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0340176, -0.176978, 0 </transform>
+				<transform> 4240.44, 0, 0, 0, 4240.44, 0, 0, 0, 4240.44, -0.0217569, 0.0766504, 0 </transform>
 				<int> 1 </int>
 				<bool> True </bool>
 				<resource  resource_type="Material" path="local://1">  </resource>
 				<real> 0 </real>
 				<bool> False </bool>
 				<int> 0 </int>
-				<transform> 4240.44, 0, 0, 0, 4240.44, 0, 0, 0, 4240.44, -3.69606, 0.0766504, 0 </transform>
-				<resource name=""></resource>				<resource  external="0">  </resource>
+				<resource  external="0">  </resource>
 				<node_path> "" </node_path>
-				<transform> 0.798109, 0.422992, -0.429068, -0.372565, 0.906134, 0.200293, 0.473515, 0, 0.880786, -2.26623, 1.32397, 5.62207 </transform>
+				<transform> 0.798109, 0.422992, -0.429068, -0.372565, 0.906134, 0.200293, 0.473515, 0, 0.880786, -3.07249, 1.32397, 4.64323 </transform>
 				<real> 60 </real>
 				<real> 0.1 </real>
 				<real> 100 </real>
 				<int> 1048575 </int>
-				<transform> 0.798109, 0.422992, -0.429068, -0.372565, 0.906134, 0.200293, 0.473515, 0, 0.880786, -13.715, 5.59038, 5.62207 </transform>
+				<resource name=""></resource>				<transform> 0.798109, 0.422992, -0.429068, -0.372565, 0.906134, 0.200293, 0.473515, 0, 0.880786, -13.715, 5.59038, 5.62207 </transform>
 				<real> 1 </real>
 				<color> 1, 1, 1, 1 </color>
 				<real> 0.05 </real>
