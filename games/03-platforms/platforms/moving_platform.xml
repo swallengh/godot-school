@@ -17,7 +17,7 @@
 			</array>
 			<string> "names" </string>
 			<string_array  len="23">
-				<string> "platform" </string>
+				<string> "moving_platform" </string>
 				<string> "input/pickable" </string>
 				<string> "shapes/0/shape" </string>
 				<string> "shapes/0/transform" </string>

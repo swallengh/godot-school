@@ -44,4 +44,4 @@ Los documentos están el el directorio `docs`, y los juegos en el directorio `ga
 * [Game 01 - Shooter](./docs/01-shooter/README.md)
 * [Game 02 - TilesMap](./docs/02-tilesmap/README.md)
 * Game 03 - Platform
-* Game 04 - 3Dobjects
+* [Game 04 - 3Dobjects](./docs/04-3Dobjects/README.md)
