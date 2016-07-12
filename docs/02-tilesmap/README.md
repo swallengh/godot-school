@@ -3,13 +3,13 @@
 
 #Juego de Tilesmap
 
-Vamos a crear una versión didáctica de un juego con un mapa 2D.
+Vamos a crear una versión didáctica de un juego con un mapa de celdas 2D.
 
 Créditos:
 
 * Inspirado en [dynadungeos](https://github.com/akien-mga/dynadungeons)
 * [CREDITOS](./CREDITS.txt)
-* Otros proyectos inspiradores:
+* Otros proyectos parecidos:
     * [Pokemon Clone](https://github.com/MarianoGnu/Pokemon-Tutorials)
     * [TD-Godot-Games](https://github.com/TutorialDoctor/TD-Godot-Games)
 * Vídeo [How to make a TileMap](https://www.youtube.com/watch?v=WwfIlut7X5I)
@@ -18,9 +18,9 @@ Esquema de trabajo:
 
 1. Idea
 2. Assets
-3. Crear mundo/personajes/objetos
-4. Lo unimos todos
-5. Volver al paso 1
+3. Crear escenas: mundo, personajes, objetos
+4. Lo unimos todo
+5. Repetimos
 
 #1. Idea
 
@@ -42,7 +42,9 @@ se mueva por el mapa e interactúe con algún objeto. Elementos:
 
 > La parte de crear nuestros propios diseños no se va a tratar en este tutorial.
 
-#3. Crear personajes/objetos
+#3. Crear escenas sueltas
+
+Crearemos escenas sueltas para los personajes y objetos.
 
 * Empezamos creando el mundo
 * luego nuestro player
@@ -51,7 +53,7 @@ se mueva por el mapa e interactúe con algún objeto. Elementos:
 ##3.1 El mundo
 
 El mundo será un mapa de tiles 2D. Lo creamos en 3 pasos:
-1. Creamos un conjunto de celdas (tiles) usando sprites.
+1. Creamos un conjunto de celdas (tiles) usando los sprites.
 2. Convertimos el conjunto de celdas en un `Tileset`
 3. Creamos un mapa con el `Tileset`
 
@@ -72,9 +74,10 @@ les añadimos dos subnodos hijo:
     * `StaticBody2D`: Este nodo porta propiedades físicas a los bloques. 
     * `Collision Shape2D`: Este nodo aporta/define la forma/superficie de collisión.
 
-> Cuando guardamos las escenas elegimos el formato XML, porque estamos usando 
-GitHub para guardar el proyecto, y cuando los ficheros tienen texto plano
-la herramienta de control de versiones Git hace mejor su trabajo.
+> Cuando guardamos las escenas elegimos el formato XML.
+> Usamos XML porque estamos usando GitHub para guardar el proyecto, 
+y cuando los ficheros tienen texto plano la herramienta de control de 
+versiones Git hace mejor su trabajo.
 
 **Creamos el objeto Tileset**
 
@@ -113,7 +116,7 @@ acciones del teclado/joystick.
 > Vemos que el código es muy sencillo, simplemente lee las acciones de entrada
 y responde aplicando un cambio de posición al personaje `player`.
 
-##3.3 El tesoro
+##3.3 La caja
 
 El tesoro lo creamos de forma muy parecida al `player`.
 * Nodo raíz `RigidBody2D`
@@ -125,3 +128,13 @@ El tesoro lo creamos de forma muy parecida al `player`.
 no tendrá script asociado, para definir comportamiento.
 
 #4. Lo unimos todo
+
+Crearemos una escena para unir todos los elementos anteriores en forma
+de una partida y/o nivel.
+
+* Creamos nueva escena `level/level1.xml`.
+* Añadimos:
+    * 1 instancia de `player/player.xml`.
+    * 1 instancia de `level/map1.xml`.
+* Añadimos nodo hijo `cajas` de tipo `Node2D`.
+    * Añadimos instancias del tipo `box/box.xml`

@@ -30,6 +30,6 @@ Vamos a probar la carga de modelos 3D dentro de GodotEngine.
 
 Descargamos unos `assets` para empezar:
 * Elegimos ficheros con formato DAE y con licencia libre. 
-    * R2D2 descargado de http://tf3dm.com/3d-model/puo-4029-44927.html.
+    * R2D2 descargado de [http://tf3dm.com/3d-model/puo-4029-44927.html](http://tf3dm.com/3d-model/puo-4029-44927.html).
     * Lo descomprimimos en `assets/R2D2`.
     
