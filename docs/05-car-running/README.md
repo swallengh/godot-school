@@ -1,6 +1,8 @@
 
-
-
+```
+Fecha: 2016-10-22
+Este proyecto está "parado" hasta nueva fecha
+```
 
 #Proyecto 05-car-running
 
@@ -54,22 +56,8 @@ Vamos a crear el personaje del jugador, que es nuestro coche.
 
 ##3.2. Plataformas
 
+`pendiente`
+
 #4. Lo unimos todo
 
-Creamos un nivel para usar los personajes creados anteriormente.
-
-* Creamos una escena nueva `level1` y la guardamos en `res://level/level1.xml`
-* Creamos nodo raíz `level1` de tipo `Node2D`.
-* Instanciamos los objetos que hemos creado: `player` y `platform`.
-* Las plataformas se pueden instanciar/copiar muchas veces para tener más.
-* Creamos un `Node2D` llamado `platforms` y ponemos como hijos de este ( acción `reparent`)
-a todos los nodos `platform`. Esto lo hacemos para poder manejar a todas las plataformas como
-un conjunto.
-
-
-#TODO
-
-* Añadir sonidos y música
-* Hacer que el coche explote.
-* Sumar puntos con cada avance.
-* Cerrar la ventana del juego al terminar.
+`pendiente`
