@@ -91,3 +91,16 @@ Creamos una **escena** para `level1`:
 
 Ponemos esta escena como la principal del proyecto en:
 * `Configuración de proyecto -> Application -> Main Scene -> res://level1/level1.xml`
+
+# ¿Cómo crear un nuevo nivel?
+
+* Escena -> nueva escena
+* Crear nuevo nodo de tipo `Node2D`, y le ponemos el nombre `level2`.
+* Creamos subnodos hijos:
+    * Dentro creamos un nodo hijo de tipo `Sprite` con el nombre `sprite` .
+        * En el atributo textura asociamos el fichero de la imagen.
+    * Instanciamos la mano.
+* Guardamos la escena `level1` como `res://levels/level2.xml`
+
+Ponemos esta escena como la principal del proyecto en:
+* `Configuración de proyecto -> Application -> Main Scene -> res://level1/level1.xml`
